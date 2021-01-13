@@ -13,7 +13,7 @@ app.use(express.json())
 app.use(express.static('public'))
 
 const birdsController = require('./controllers/birds_controller.js')
-app.use('/birds, birdsController')
+app.use('/birds', birdsController)
 
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
