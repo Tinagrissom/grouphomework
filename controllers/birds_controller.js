@@ -13,7 +13,7 @@ birds.get('/', (req, res) => {
 birds.post('/', (req, res) => {
   Bird.create(req.body, (err, createdBird) => {
     Bird.find({}, (err, foundBirds) => {
-      res.json()
+      res.json(foundBirds)
     })
   })
 })
