@@ -14,9 +14,6 @@ app.use(express.static('public'))
 
 const birdsController = require('./controllers/birds_controller.js')
 app.use('/birds, birdsController')
-// app.get('/', (req, res) => {
-//   res.send('Hello World')
-// })
 
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
