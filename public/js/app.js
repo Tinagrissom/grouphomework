@@ -59,8 +59,6 @@ class App extends React.Component {
 
                 <form className="addForm" onSubmit={this.handleSubmit}>
                   <label htmlFor="name">Name</label>
-                <form onSubmit={this.handleSubmit}>
-                  <label htmlFor="name">Name</label>
                   <input type="text" id="name" onChange={this.handleChange}/>
                   <br />
                   <label htmlFor="image">Image</label>
@@ -80,17 +78,13 @@ class App extends React.Component {
                 {this.state.birds.map((bird) => {
                   return (
                     <div className="card">
-            <h2>Recent Sightings</h2>
-              <ul>
-                {this.state.birds.map((bird) => {
-                  return (
                     <li key={bird._id}>
                     {bird.name}
                     <img src={bird.image} alt={bird.name} />
                     <button value={bird._id} onClick={this.deleteBird}>DELETE</button>
                       <details>
                         <summary>Edit this Sighting</summary>
-                        <form id={bird._id} onSubmit={this.updateBird}>
+                          <form id={bird._id} onSubmit={this.updateBird}>
                           <label htmlFor="name">Name</label>
                           <input type="text" id="name" onChange={this.handleChange} />
                           <br />
@@ -101,16 +95,6 @@ class App extends React.Component {
                           <input type="text" id="date" onChange={this.handleChange} />
                           <br />
                           <label htmlFor="location">Location</label>
-                          <br />
-                          <input type="text" id="name" onChange={this.handleChange} />
-                          <label htmlFor="image">Image</label>
-                          <br />
-                          <input type="text" id="image" onChange={this.handleChange} />
-                          <label htmlFor="date">Date</label>
-                          <br />
-                          <input type="text" id="date" onChange={this.handleChange} />
-                          <label htmlFor="location">Location</label>
-                          <br />
                           <input type="text" id="location" onChange={this.handleChange} />
                           <br />
                           <input type="submit" value="Update"/>
@@ -121,8 +105,6 @@ class App extends React.Component {
                   )
                 })}
               </div>
-                  )
-                })}
             </ul>
       </div>
     )
