@@ -60,7 +60,7 @@ class App extends React.Component {
                 <form className="addForm" onSubmit={this.handleSubmit}>
                   <label htmlFor="name">Name</label>
                 <form onSubmit={this.handleSubmit}>
-                  <label htmlFor="name">Name</lebel>
+                  <label htmlFor="name">Name</label>
                   <input type="text" id="name" onChange={this.handleChange}/>
                   <br />
                   <label htmlFor="image">Image</label>
